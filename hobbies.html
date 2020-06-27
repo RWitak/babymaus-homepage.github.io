@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="de">
+    <head>
+        <title>
+            Hobbies der Babymaus
+        </title>
+        <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+        crossorigin="anonymous">
+        <link rel="stylesheet"
+        href="styles.css">
+
+    </head>
+    <body class="user-select-none">
+
+    <!-- Modal -->
+        <div class="modal fade" id="hobby-message" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h6 class="modal-title" id="exampleModalLabel">Was macht die Babymaus gerade?</h6>
+              </div>
+              <div class="modal-body media">
+                <img src="img/dont_disturb.jpg" class="mr-3" style="height: 150px;">
+                <div class="media-body">
+                  <h4 id="curr_activity" class="mt-0" style="text-align: justify;">TEST</h4>
+                  Wir sollten sie lieber nicht stören!
+                </div>
+              </div>
+              <div class="modal-footer">
+                <a href="index.html" class="btn btn-secondary disabled" tabindex="-1" role="button" aria-disabled="true">Entschululu...</a>
+                <a href="index.html" class="btn btn-primary" tabindex="-1" role="button">*leise weggehen*</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="header" class="text-center text-wrap">
+            <h1 class="display-2 glow">Hobbys der Babymaus</h1>
+        </div>
+
+        <ol class="nav nav-tabs mx-4" style="border-bottom: none">
+            <li class="nav-item">
+                <a class="nav-link" href="/index.html">
+                    <svg class="bi bi-house-door-fill" width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/>
+                      <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                    </svg>Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/freunde.html">Freunde</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/bezahlen.html">Geschenk</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/kontakt.html">Nachricht</a>
+            </li>
+            <li class="nav-item" id="active-navitem">
+                <a class="nav-link active disabled" id="active-navlink" href="/hobbies.html">Hobbys</a>
+            </li>
+        </ol>
+
+
+        <form class="rounded form-group" style="text-align: center; margin-top: 0px; z-index: 1">
+            <h3>Was die Babymaus so macht</h3>
+            <hr>
+            <large>
+            <p>Die Babymaus hat ganz viele tolle Hobbys, die alle sehr glücklich machen!
+            <br>(... vor allem, wenn man eine <b>kleine Babymaus</b> ist!)</p>
+            <p>Es wäre aber unmöglich, alles aufzuzählen, was die Babymaus macht!
+            <br>Es ist nämlich sehr viel!</p>
+            <p>Aber was macht die Babymaus wohl <b>jetzt gerade</b>???</p>
+            </large>
+            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#hobby-message" aria-hidden="true">Herausfinden!</button>
+        </form>
+        <script src="hobbyGenerator.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    </body>
+</html>

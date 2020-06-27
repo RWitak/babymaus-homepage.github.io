@@ -1,0 +1,144 @@
+@font-face {
+  font-family: mouseFont;
+  src: url('cheeseandmouse.woff2') format('woff2');
+  font-display: block;
+  unicode-range: U+000-5FF;
+}
+
+html {
+    height: 100%;
+}
+
+
+body
+{
+    animation: fadein 3s;
+    height: 100%;
+    margin: 0;
+    background: rgb(165,240,255);
+}
+
+#header
+{
+    letter-spacing: 2px;
+    font-family: "mouseFont";
+    word-wrap: break-word;
+    padding-bottom: 50px;
+    background: -webkit-linear-gradient(rgba(64,52,138,1), rgba(0,122,144,1), rgba(165,240,255,1));
+    background:    -moz-linear-gradient(rgba(64,52,138,1), rgba(0,122,144,1), rgba(165,240,255,1));
+    background:      -o-linear-gradient(rgba(64,52,138,1), rgba(0,122,144,1), rgba(165,240,255,1));
+    background:         linear-gradient(rgba(64,52,138,1), rgba(0,122,144,1), rgba(165,240,255,1));
+    background-repeat: no-repeat;
+}
+
+@keyframes fadein {
+  0% { opacity: 0; background:white}
+  50%   { opacity: 0;}
+  100%   { opacity: 1}
+}
+
+#real_body
+{
+
+    padding: 15px;
+}
+
+h2
+{
+    font-family: "Vivaldi", cursive;
+    color: cornsilk;
+    text-align: center;
+    text-shadow: 0px 0px 7px;
+    margin-top: 25px;
+}
+
+h5
+{
+    text-align: center;
+}
+
+form
+{
+    background: cornsilk;
+    margin: 20px;
+    margin-top: 0px;
+    padding: 20px;
+    position: relative;
+    z-index: 1
+}
+
+
+.bg-cornsilk
+{
+    background-color: cornsilk;
+}
+
+.card-deck
+{
+     padding: 20px;
+}
+
+.card
+{
+    box-shadow: 0px 0px 8px cornsilk;
+    background-color: cornsilk;
+}
+
+.card-body
+{
+    padding-bottom: 0px;
+}
+
+.card-title
+{
+    font-weight: bold;
+}
+
+.carousel-image
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-item
+{
+    position: relative;
+    height:100%;
+}
+
+
+.form-control {
+    margin-bottom: 20px;
+}
+
+.glow {
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.nav-item {
+    border-radius: .25rem;
+}
+
+#active-navlink {
+    background-color: cornsilk;
+}
+
+#active-navitem {
+    box-shadow: 0px 0px 8px cornsilk;
+    border-bottom: none;
+}
+
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}

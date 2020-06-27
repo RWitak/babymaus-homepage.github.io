@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="de">
+    <head>
+        <title>
+            Nachricht an Babymaus
+        </title>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+            crossorigin="anonymous">
+
+        <link rel="stylesheet"
+            href="styles.css">
+
+
+        <script type="text/javascript">
+            function checkform() {
+                var form = document.forms["requiredForm"].elements;
+                var cansubmit = true;
+
+                for (var i = 0; i < form.length; i++) {
+                    if (form[i].required){
+                        if (form[i].value.length == 0) cansubmit = false;
+                        if (!document.getElementById("friendly-check").checked) cansubmit = false;
+                    }
+                }
+
+                document.getElementById("submitButton").disabled = !cansubmit;
+            }
+        </script>
+    </head>
+
+    <body class="user-select-none">
+
+        <!-- Modal -->
+        <div class="modal fade" id="submit-message" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Die Babymaus dankt!</h5>
+              </div>
+              <div class="modal-body" style="padding: 0px;">
+                <img src="img/jerry_letter.gif" style="width: 100%;">
+              </div>
+              <div class="modal-footer">
+                <a href="index.html" class="btn btn-secondary disabled" tabindex="-1" role="button" aria-disabled="true">Eh normal...</a>
+                <a href="index.html" class="btn btn-primary" tabindex="-1" role="button">Gern geschehen, liebe Babymaus</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="header" class="text-center text-wrap">
+            <h1 class="display-2 glow">Nachricht an Babymaus</h1>
+        </div>
+
+        <ol class="nav nav-tabs mx-4" style="border-bottom: none">
+            <li class="nav-item">
+                <a class="nav-link" href="/index.html">
+                    <svg class="bi bi-house-door-fill" width="1em" height="1em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z"/>
+                      <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                    </svg>Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/freunde.html">Freunde</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/hobbies.html">Hobbys</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/bezahlen.html">Geschenk</a>
+            </li>
+            <li class="nav-item" id="active-navitem">
+                <a class="nav-link active disabled" id="active-navlink" href="/kontakt.html">Nachricht</a>
+            </li>
+        </ol>
+
+        <form id="requiredForm" class="rounded" onsubmit="return false;">
+
+            <div class="form-group">
+
+                <div class="alert alert-danger d-inline-flex form-row" role="alert">
+
+                    <svg class="bi bi-exclamation-square"
+                        width="5em" height="5em" viewBox="0 0 16 16"
+                        fill="currentColor" style="margin-right: 10px;" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                      <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                    </svg>
+                    <p style="margin-bottom: 0px">
+                        <span class="align-middle">
+                            <b>Achtung:</b><br>
+                            <u>JEDER</u> will mit der Babymaus sprechen!<br>
+                            Die Babymaus ist aber nur
+                            <b><i>ganz klein</i></b>
+                            und hat auch eigentlich gar keine Zeit!
+                        </span>
+                    </p>
+                </div>
+                <br>
+                <div class="alert alert-info d-inline-flex form-row" role="alert">
+                    <svg class="bi bi-emoji-smile" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" style="margin-right: 10px" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      <path fill-rule="evenodd" d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683z"/>
+                      <path d="M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
+                    </svg>
+
+                    <p class="mb-0">
+                        <span class="align-middle">
+                            <b>Sagen Sie also nur liebe Sachen, die die Babymaus auch wirklich hören will.</b>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="form-group w-75">
+                <div class="form-row">
+                    <p><big>Wer spricht?</big></p>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="firstname">Vorname:</label>
+                        <input type="text" class="form-control" id="firstname" placeholder="Babymaus" onKeyup="checkform()" required>
+                    </div>
+                    <div class="col">
+                        <label for="lastname">Nachname:</label>
+                        <input type="text" class="form-control" id="lastname" placeholder="Kogler" onKeyup="checkform()" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-7">
+                        <label for="mail-address">Mail-Adresse:</label>
+                        <input type="email" class="form-control" id="mail-address" placeholder="babymaus-fan1989@maushaus.at" onKeyup="checkform()" required>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="form-group">
+                <div class="form-row">
+                    <p><big>Was wollen Sie der Babymaus Liebes sagen?</big></p>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="message">Eine liebe Nachricht:</label>
+                    </div>
+                </div>
+                <textarea class="form-control w-75" id="message" rows="5" placeholder="Liebe Babymaus, du bist ganz besonders toll, weil..." onKeyup="checkform()" required></textarea>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="friendly-check" onClick="checkform()" required>
+                <label class="custom-control-label" for="friendly-check">Ich bin <b>sicher</b>, dass die Babymaus das wirklich lesen will! <small><i>(Achtung: Sie ist <b>ganz klein</b>!!!)</i></small></label>
+            </div>
+            <br>
+            <div>
+                <button class="btn btn-outline-primary" type="submit" id="submitButton"
+                data-toggle="modal" data-target="#submit-message" aria-hidden="true" disabled>Nachricht an Babymaus absenden</button>
+            </div>
+        </form>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    </body>
+</html>
