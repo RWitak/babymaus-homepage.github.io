@@ -1,6 +1,8 @@
 @font-face {
   font-family: mouseFont;
   src: url('cheeseandmouse.woff2') format('woff2');
+  src: url('cheese_and_mouse.woff') format('woff');
+  src: url('cheese_and_mouse.ttf') format('truetype');
   font-display: block;
   unicode-range: U+000-5FF;
 }
