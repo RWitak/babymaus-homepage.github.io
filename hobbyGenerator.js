@@ -23,18 +23,15 @@ var hobbies = [
 
 function getRandomHobby() {
     var d = new Date();
-    var monthDay = d.getMonth.concat("-", d.getDate);
+    var monthDay = d.getMonth() + "-" + d.getDate();
     // months are 0-indexed, dates are 1-indexed!
     if (monthDay == "6-22"){
-        return "ihren Geburtstag Feiern"
-    } else if (monthDay = "6-5") {
-        return "ihren Geburtstag Planen"
+        return "ihren Geburtstag Feiern";
     }
 
-    var n = Math.random(hobbies.length);
     var randomHobby = hobbies[(Math.random() * hobbies.length) | 0]
     return randomHobby;
 }
 
-var currActivity = "Die Babymaus ist gerade mit " + getRandomHobby() + " beschäftigt!"
+var currActivity = "Die Babymaus ist gerade mit " + getRandomHobby() + " beschäftigt!";
 document.querySelector("#curr_activity").innerHTML = currActivity;
