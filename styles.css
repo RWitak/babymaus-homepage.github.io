@@ -14,7 +14,8 @@ html {
 
 body
 {
-    animation: fadein 3s;
+    -webkit-animation: fadein 3s;
+            animation: fadein 3s;
     height: 100%;
     margin: 0;
     background: rgb(165,240,255);
@@ -27,11 +28,14 @@ body
     font-family: "mouseFont";
     word-wrap: break-word;
     padding-bottom: 50px;
-    background: -webkit-linear-gradient(rgba(64,52,138,1), rgba(0,122,144,1), rgba(165,240,255,1));
-    background:    -moz-linear-gradient(rgba(64,52,138,1), rgba(0,122,144,1), rgba(165,240,255,1));
-    background:      -o-linear-gradient(rgba(64,52,138,1), rgba(0,122,144,1), rgba(165,240,255,1));
     background:         linear-gradient(rgba(64,52,138,1), rgba(0,122,144,1), rgba(165,240,255,1));
     background-repeat: no-repeat;
+}
+
+@-webkit-keyframes fadein {
+  0% { opacity: 0; background:white}
+  50%   { opacity: 0;}
+  100%   { opacity: 1}
 }
 
 @keyframes fadein {
@@ -119,7 +123,6 @@ form
   color: #fff;
   text-align: center;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
 }
 
@@ -134,6 +137,16 @@ form
 #active-navitem {
     box-shadow: 0px 0px 8px cornsilk;
     border-bottom: none;
+}
+
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
 }
 
 
