@@ -24,6 +24,8 @@ body
 
 #header
 {
+    position: relative;
+    top: 0;
     letter-spacing: 2px;
     font-family: "mouseFont";
     word-wrap: break-word;
@@ -46,8 +48,37 @@ body
 
 #real_body
 {
-
     padding: 15px;
+}
+
+h1 {
+    font-weight: 500; 
+    padding: 20px;
+    width: 100%;
+    color: white;
+}
+
+#logo-front {
+    position: relative;
+    text-shadow:    0 0 10px #fff, 
+                    0 0 20px #fff, 
+                    0 0 30px #e60073, 
+                    0 0 40px #e60073, 
+                    0 0 50px #e60073, 
+                    0 0 60px #e60073, 
+                    0 0 70px #e60073;
+}
+
+#logo-back {
+    position: absolute;
+    top: 0;
+    text-shadow:    0 0 20px #fff, 
+                    0 0 30px #ff4da6, 
+                    0 0 40px #ff4da6, 
+                    0 0 50px #ff4da6, 
+                    0 0 60px #ff4da6, 
+                    0 0 70px #ff4da6, 
+                    0 0 80px #ff4da6;
 }
 
 h2
@@ -120,6 +151,7 @@ form
 }
 
 .glow {
+  transform: translateZ(1);
   color: #fff;
   text-align: center;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
@@ -142,19 +174,18 @@ form
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    opacity: 20%;
   }
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+      opacity: 80%;
   }
 }
 
-
 @keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    opacity: 20%;
   }
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+      opacity: 80%;
   }
 }
